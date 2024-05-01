@@ -11,11 +11,11 @@ Reference source: https://www.huntress.com/blog/creating-macos-ransomware
 `diskutil apfs addVolume “${disk_name}” APFS XX -pasphrase “${p}”`
 + Create a new disk volume in the selected APFS container and set it as an encrypted volume
 `mv -f ./Sample_Dir/* /Volumes/XX`
-+ Move some testing sample documents to the encrypted Volume
++ Move some testing sample documents to the encrypted Volume, replace the sample document path
 `echo $p`
 + Display the passphrase
 
-# Simple Python Bind Shell (python_bind_shell.py)
+# Simple Python Bind Shell (python_bind_shell.sh)
 This script simulates a bind shell scenario where an attacker set a backdoor on the target system using Python 3.
 Reference source: Online - Reverse Shell Generator (https://www.revshells.com/) (select Bind tab and select
 Python3 Bind option)
