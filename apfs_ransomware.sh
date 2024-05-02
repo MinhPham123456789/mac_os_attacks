@@ -1,1 +1,1 @@
-sh -c ‘p=”1234”;disk_name=$(diskutil info / | grep “APFS Container:” | tr -s “ “ | cut -d” “ -f4);diskutil apfs addVolume “${disk_name}” APFS XX -passphrase “${p}”; mv -f./Sample_Dir/* /Volumes/XX; diskutil umount XX; echo $p’
+sh -c 'p="1234"; disk_name=$(diskutil info / | grep "APFS Container:" | tr -s " " | cut -d" " -f4);diskutil apfs addVolume "${disk_name}" APFS XX -passphrase "${p}"; mv -f ./Sample_Dir/* /Volumes/XX;diskutil umount force XX;echo $p'
